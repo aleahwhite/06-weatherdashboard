@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(166, 211, 250);
+}
+
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(7, 7, 164);
+}
+
+
+label {
+    margin-top: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 27px;
+    color: rgb(7, 7, 164);
+    font-weight: bold;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+#location-input {
+    font-size: 15px;
+    width: 60%;
+    height: 25px;
+    padding: 10px;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 3px solid #cdc164;
+}
+
+button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: #cdc164;
+    color: rgb(7, 7, 164);
+    border-radius: 12px;
+    border-color: #cdc164;
+    border-style: solid;
+}
+
+
+
+
+#weather-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.weather-card {
+    background-color: rgb(7, 7, 164);
+    width: 40%;
+    height: 200px;
+    border: 10px solid #cdc164;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.weather-card h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(217, 230, 241);
+    font-size: 27px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.weather-card p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(166, 211, 250);
+    font-size: 23px;
+    text-align: center;
+    margin: 5px 0;
+}
