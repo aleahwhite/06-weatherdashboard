@@ -9,7 +9,7 @@ locationInput.addEventListener('keypress', function (event) {
 });
 
 function kelvinToFahrenheit(kelvin) {
-    return ((kelvin - 273.15) * 9/5) + 32;
+    return ((kelvin - 273.15) * 9 / 5) + 32;
 }
 
 function createWeatherCard(item, index) {
@@ -23,7 +23,7 @@ function createWeatherCard(item, index) {
 
     var temp = document.createElement('p');
     var tempFahrenheit = kelvinToFahrenheit(item.main.temp);
-    temp.textContent = 'Temperature: ' + tempFahrenheit.toFixed(3) + ' F'; 
+    temp.textContent = 'Temperature: ' + tempFahrenheit.toFixed(3) + ' F';
 
     var humidity = document.createElement('p');
     humidity.textContent = 'Humidity: ' + item.main.humidity + ' %rh';
@@ -40,6 +40,8 @@ function createWeatherCard(item, index) {
 button.addEventListener('click', performSearch);
 
 function performSearch() {
+
+    document.getElementById('weather-card-container').innerHTML = '';
 
     var location = document.getElementById('location-input').value;
     var apigeoURL = 'https://api.openweathermap.org/geo/1.0/direct?q=' + location + '&limit=1&appid=' + apiKey;
