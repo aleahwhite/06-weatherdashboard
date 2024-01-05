@@ -8,6 +8,10 @@ locationInput.addEventListener('keypress', function (event) {
     }
 });
 
+function kelvinToFahrenheit(kelvin) {
+    return ((kelvin - 273.15) * 9/5) + 32;
+}
+
 function createWeatherCard(item, index) {
     var container = document.getElementById('weather-card-container');
 
@@ -18,7 +22,8 @@ function createWeatherCard(item, index) {
     title.textContent = 'Day ' + (index + 1);
 
     var temp = document.createElement('p');
-    temp.textContent = 'Temperature: ' + item.main.temp + ' K'; //change to F once you add the JS to convert K to F
+    var tempFahrenheit = kelvinToFahrenheit(item.main.temp);
+    temp.textContent = 'Temperature: ' + tempFahrenheit.toFixed(3) + ' F'; 
 
     var humidity = document.createElement('p');
     humidity.textContent = 'Humidity: ' + item.main.humidity + ' %rh';
