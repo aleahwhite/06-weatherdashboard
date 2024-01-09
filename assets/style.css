@@ -48,6 +48,22 @@ button {
     border-style: solid;
 }
 
+#recent-searches-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.recent-search-item {
+    margin: 15px;
+    padding: 10px;
+    color: #f4f2de;
+    background-color: rgb(7, 7, 164);
+    border: 12px solid rgb(7, 7, 164);
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
 

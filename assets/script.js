@@ -36,14 +36,47 @@ function createWeatherCard(item, index) {
 
 }
 
+var recentSearches = [];
+
+function updateRecentSearches(newSearch) {
+    recentSearches.unshift(newSearch);
+
+    if (recentSearches.lenth > 5) {
+        recentSearches.pop();
+    }
+
+    displayRecentSearches();
+}
+
+function displayRecentSearches() {
+    var container = document.getElementById('recent-search-container');
+    container.innerHTML = '';
+
+    recentSearches.forEach(function (search) {
+        var searchItem = document.createElement('button');
+        searchItem.textContent = search;
+        searchItem.className = 'recent-search-item';
+        searchItem.onclick = function () { performSearch(search); };
+        container.appendChild(searchItem);
+    });
+}
 
 button.addEventListener('click', performSearch);
 
-function performSearch() {
+function performSearch(searchInput) {
+
+    if (typeof searchInput === 'string') {
+        locationInput.value = searchInput;
+    } else {
+        searchInput = locationInput.value;
+    }
 
     document.getElementById('weather-card-container').innerHTML = '';
 
-    var location = document.getElementById('location-input').value;
+    updateRecentSearches(searchInput);
+
+    // var location = document.getElementById('location-input').value;
+    var location = searchInput;
     var apigeoURL = 'https://api.openweathermap.org/geo/1.0/direct?q=' + location + '&limit=1&appid=' + apiKey;
 
     fetch(apigeoURL, {
