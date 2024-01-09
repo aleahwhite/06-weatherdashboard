@@ -5,7 +5,7 @@ This website that uses HTML, CSS, and mainly JavaScript to put together a 6 day 
 
 ## Image and Link:
 ![Alt text](./assets/weather-screenshot.png)
-Link to deployed website: 
+Link to deployed website: https://aleahwhite.github.io/06-weatherdashboard/ 
 
 ## Installation:
 N/A
