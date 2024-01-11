@@ -1,7 +1,7 @@
 # Challenge 6 - Weather Dashboard
 
 ## Description:
-This website that uses HTML, CSS, and mainly JavaScript to put together a 6 day Weather Dashboard. Using one API to fetch the coordinates of the city that you put into the search bar, then using those coordinates in another API to get the weather forecast for that place. I decided on pulling up the temperature and humidity for today and the following 5. There is a search button to use or you can hit enter to search. Once you do so, six cards with the temperature, humidity, and day will be displayed. After you search you will notice buttons popping up labeled with your search, if you click those buttons you will go back to the search you recently did.
+This website that uses HTML, CSS, and mainly JavaScript to put together a 6 day Weather Dashboard. Using one API to fetch the coordinates of the city that you put into the search bar, then using those coordinates in another API to get the weather forecast for that place. I decided on pulling up the temperature and humidity for today and the following 5. There is a search button to use or you can hit the enter keyto search. Once you do so, six cards with the temperature, humidity, and day will be displayed. After you search you will notice buttons popping up labeled with your search, if you click those buttons you will go back to the search you recently did.
 
 ## Image and Link:
 ![Alt text](./assets/weather-screenshot.png)
